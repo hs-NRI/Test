@@ -15,43 +15,43 @@
       <polygon points="0 24.94 0 19.66 7.35 12.47 0 5.92 0 0 12.47 12.47 0 24.94"/>
     </symbol>
   </svg>
-  <?php
+        <php
 
 
-//表示するファイルの設定　　　ここから▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼
-//$allow　→　１回だけ許可するのファイル
-//$deny　　→　２回目以降表示するファイル
-$allow = "./allow.html";
-$deny = "./deny.html";
-//表示するファイルの設定　　　ここまで▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲
+      //表示するファイルの設定　　　ここから▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼
+      //$allow　→　１回だけ許可するのファイル
+      //$deny　　→　２回目以降表示するファイル
+      $allow = "./allow.html";
+      $deny = "./deny.html";
+      //表示するファイルの設定　　　ここまで▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲
 
 
-$buff = ""; $cookie=$_COOKIE["Visiter"];
-if(strcmp($cookie,"") == 0){
-$cookie = 0;
-}
-$value = $cookie + 1; $timeout = time() + 365 * 86400;
-setcookie("Visiter","$value",$timeout,'/',$_SERVER["SERVER_NAME"] . ";");
+      $buff = ""; $cookie=$_COOKIE["Visiter"];
+      if(strcmp($cookie,"") == 0){
+      $cookie = 0;
+      }
+      $value = $cookie + 1; $timeout = time() + 365 * 86400;
+      setcookie("Visiter","$value",$timeout,'/',$_SERVER["SERVER_NAME"] . ";");
 
-if( $cookie ) {
-$read_file = $deny;
-}else{
-$read_file = $allow;
-}
+      if( $cookie ) {
+      $read_file = $deny;
+      }else{
+      $read_file = $allow;
+      }
 
-if (! ($fp = fopen ($read_file , "r" ))) {
-die("ファイルが開けません。");
-}
+      if (! ($fp = fopen ($read_file , "r" ))) {
+      die("ファイルが開けません。");
+      }
 
-while ($line = fgets($fp)) {
-$buff .= $line;
-}
-fclose($fp);
+      while ($line = fgets($fp)) {
+      $buff .= $line;
+      }
+      fclose($fp);
 
 
-print $buff;
+      print $buff;
 
-?>
+      >
 
   <header class="header">
     <div class="container">
