@@ -64,10 +64,13 @@
     <section class="section">
       <div class="container">
        <!-- <a class="btn" "OpenWindow()">さっそく100万円を手に入れよう！<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></a> -->
-        <button type="button" onclick="OpenWindow()">Test </button>
+        <body> <button type="button" onclick="OpenWindow()">Test </button> </body>
         <script>
           function OpenWindow(){
-          window.open("https://hs-nri.github.io/Test/Stage1.html", "_blank", "fullscreen=yes");
+            x = (screen.width) / 1;
+            y = (screen.height) / 1;
+            window.open(URL,"new","screenX=0,screenY=0,left=0,top=0,width="+x+",height="+y+",scrollbars=1,toolbar=1,menubar=1,staus=1,resizable=1");
+         <!-- window.open("https://hs-nri.github.io/Test/Stage1.html", "_blank", "fullscreen=yes"); -->
           }
           </script>
       </div>
