@@ -88,15 +88,18 @@ Youtube貼り付けここまで -->
               <div class="clear-message__content">家庭科室の扉が開いた！<br>
                 さぁ先生を助けるため<br>
                 ３つステージの謎をとき、暗号を見つけ出そう！</div>
-              <!-- <button v-on:click="nextStage('stage1')" onclick="OpenTab()" class="clear-message__btn btn">100万円を受け取ろう！<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button> -->
-              <button v-on:click="nextStage('stage1')" onclick="location.href='./Stage2.html'" class="clear-message__btn btn">100万円を受け取ろう！<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
+              <button v-on:click="nextStage('stage1')" onclick="OpenWindow()" class="clear-message__btn btn">100万円を受け取ろう！<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
+              <!-- <button v-on:click="nextStage('stage1')" onclick="location.href='./Stage2.html'" class="clear-message__btn btn">100万円を受け取ろう！<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button> --
               <!-- <a class="btn" href="Stage1.html">さっそく100万円を手に入れよう！<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></a> -->
-              <!-- <script>
-                function OpenTab()
-                {
-                 window.open("https://hs-nri.github.io/Test/Stage2.html", "Stage2") ;
-                }
-                </script> -->
+               <script>
+               }
+               function OpenWindow(){
+                      x = (screen.width) / 1;
+                      y = (screen.height) / 1;
+                      window.open("https://hs-nri.github.io/Test/Stage2.html", null,"screenX=0,screenY=0,left=0,top=0,width="+x+",height="+y+",scrollbars=1,toolbar=1,menubar=1,staus=1,resizable=1");
+                      window.open('about:blank', '_self').close();;
+               }
+                </script>
             </div>
           </div>
         </section>
