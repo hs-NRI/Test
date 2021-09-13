@@ -31,6 +31,9 @@ body {
 img {
   width: 100%;
 }
+details summary::-webkit-details-marker{
+  display: none; 
+}
 
 figure {
   margin: 0;
