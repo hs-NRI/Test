@@ -31,8 +31,13 @@ body {
 img {
   width: 100%;
 }
-summary::-webkit-details-marker{
-  display: none; 
+
+summary {
+	list-style: none;
+}
+
+summary::-webkit-details-marker {
+	display: none;
 }
 
 figure {
