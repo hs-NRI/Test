@@ -28,6 +28,11 @@ body {
   margin: 0;
 }
 
+.flex{
+  display: flex;
+  justify-content: center;	
+}
+
 li{
   list-style:none;
   background-color:#ffffff;
