@@ -95,6 +95,7 @@
               function slideshow_timer3(){
                 if (numb == 1){
                     /*num = 0;*/
+                    intervalID = setInterval("updateProgress()", 50);
                     boolb = false;
                 } 
                 else {
@@ -103,7 +104,6 @@
                 if(boolb){
                     document.getElementById("mypic_b").src=pics_srcb[numb];
                     setTimeout("slideshow_timer3()",15000); 
-                    //intervalID = setInterval("updateProgress()",50);
                 }
             　 }
               </script></li>
