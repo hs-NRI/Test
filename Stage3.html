@@ -149,10 +149,13 @@
             // 最大値まで達したら終了
             if (val == 100) {
               clearInterval(intervalID);
-              //window.open('about:blank', '_self').close();
-              window.close();
+              setTimeout("func2()",1000); 
             }
-        }
+          }
+          
+          function func2(){
+            window.close();
+          }
         </script>
         
         
