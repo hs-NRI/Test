@@ -91,11 +91,11 @@
               var boolb = true;
  
               slideshow_timer3();
- 
+              intervalID = setInterval("updateProgress()", 50);
+               
               function slideshow_timer3(){
                 if (numb == 1){
                     /*num = 0;*/
-                    intervalID = setInterval("updateProgress()", 50);
                     boolb = false;
                 } 
                 else {
@@ -112,6 +112,7 @@
         <!--進捗状況を表すローディングバー -->
         <div>
           <progress id="myProgress" value="0" max="100">0%</progress>
+        </div>
            <input type="button" id="myButton" onclick="func1()" value="スタート">
          <script>
            var val;//進捗値
@@ -126,8 +127,8 @@
                 intervalID = setInterval("updateProgress()", 50);
               }
            
-           function updateProgress(){
-            var val += 1;
+           function updateProgress() {
+             val += 1;
              document.getElementById("myProgress").value = val;
              document.getElementByID("myProgress").innerText = val + "%";
              
@@ -137,7 +138,6 @@
              }
            }
          </script>
-       </div>
         
         
         
