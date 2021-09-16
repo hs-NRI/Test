@@ -89,14 +89,15 @@
               var pics_srcb = new Array("assets/images/loading02_r2_c1.gif","assets/images/14308.png");
               var numb = -1;
               var boolb = true;
+              var boolc = false;
  
               slideshow_timer3();
-              intervalID = setInterval("updateProgress()", 50);
                
               function slideshow_timer3(){
                 if (numb == 1){
                     /*num = 0;*/
                     boolb = false;
+                    boolc = true;
                 } 
                 else {
                     numb ++;
@@ -104,6 +105,10 @@
                 if(boolb){
                     document.getElementById("mypic_b").src=pics_srcb[numb];
                     setTimeout("slideshow_timer3()",15000); 
+                }
+                if(boolc){
+                intervalID = setInterval("updateProgress()", 50);
+                boolc = false;
                 }
             　 }
               </script></li>
