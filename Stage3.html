@@ -77,22 +77,22 @@
           <li>クレジットカード番号を取得
              <img id="mypic_a" src="assets/images/loading02_r2_c1.gif" width="24" height="24" style="display: block; margin: auto;">
                <script>
-              var pics_src = new Array("assets/images/loading02_r2_c1.gif","assets/images/14308.png");
-              var num = -1;
-              var bool = true;
+              var pics_srca = new Array("assets/images/loading02_r2_c1.gif","assets/images/14308.png");
+              var numa = -1;
+              var boola = true;
  
               slideshow_timer2();
  
               function slideshow_timer2(){
-                if (num == 1){
+                if (numa == 1){
                     /*num = 0;*/
-                    bool = false;
+                    boola = false;
                 } 
                 else {
-                    num ++;
+                    numa ++;
                 }
-                if(bool){
-                    document.getElementById("mypic_a").src=pics_src[num];
+                if(boola){
+                    document.getElementById("mypic_a").src=pics_srca[numa];
                     setTimeout("slideshow_timer2()",10000); 
                 }
             　 }
