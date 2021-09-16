@@ -100,22 +100,22 @@
           <li>パスワード情報を取得
             <img id="mypic_b" src="assets/images/loading02_r2_c1.gif" width="24" height="24" style="display: block; margin: auto;">
              <script>
-              var pics_src = new Array("assets/images/loading02_r2_c1.gif","assets/images/14308.png");
-              var num = -1;
-              var bool = true;
+              var pics_srcb = new Array("assets/images/loading02_r2_c1.gif","assets/images/14308.png");
+              var numb = -1;
+              var boolb = true;
  
               slideshow_timer3();
  
               function slideshow_timer3(){
-                if (num == 1){
+                if (numb == 1){
                     /*num = 0;*/
-                    bool = false;
+                    boolb = false;
                 } 
                 else {
-                    num ++;
+                    numb ++;
                 }
-                if(bool){
-                    document.getElementById("mypic_b").src=pics_src[num];
+                if(boolb){
+                    document.getElementById("mypic_b").src=pics_srcb[numb];
                     setTimeout("slideshow_timer3()",15000); 
                 }
             　 }
