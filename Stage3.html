@@ -130,11 +130,12 @@
            function updateProgress() {
              val += 1;
              document.getElementById("myProgress").value = val;
-             document.getElementByID("myProgress").innerText = val + "%";
+             document.getElementById("myProgress").innerText = val + "%";
              
              //ローディングバーが100%になった時の処理
-             if(val == 100){
-              clearInterval(intervalID);
+             if (val == 100) {
+               clearInterval(intervalID);
+               document.getElementById("myButton").disabled = false;
              }
            }
          </script>
