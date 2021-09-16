@@ -103,7 +103,7 @@
                 if(boolb){
                     document.getElementById("mypic_b").src=pics_srcb[numb];
                     setTimeout("slideshow_timer3()",15000); 
-                    intervalID = setInterval("updateProgress()",50);
+                    //intervalID = setInterval("updateProgress()",50);
                 }
             　 }
               </script></li>
@@ -112,10 +112,20 @@
         <!--進捗状況を表すローディングバー -->
         <div>
           <progress id="myProgress" value="0" max="100">0%</progress>
+           <input type="button" id="myButton" onclick="func1()" value="スタート">
         </div>
          <script>
            var val;//進捗値
            var intervalID //一定間隔で処理を行うintervalのIDを保持
+           
+             // ボタンを押した時に動く関数
+              function func1() {
+                val = 0;
+                // ボタンを無効にする(何回も押せないように)
+                document.getElementById("myButton").disabled = true;
+                // 50msおきにプログレスバーを更新する
+                intervalID = setInterval("updateProgress()", 50);
+              }
            
            function updateProgress(){
             var val += 1;
