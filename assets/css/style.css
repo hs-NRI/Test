@@ -42,6 +42,10 @@ li{
   margin:8px;
   width:500px;
 }
+.float{
+  margin: auto;
+  overflow: hidden;
+}
 
 /*
 img {
