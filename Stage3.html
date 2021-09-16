@@ -86,25 +86,24 @@
               </script></li>
             
               <li>ファイルデータ解析中&emsp;<img id="mypic_b" src="assets/images/loading02_r2_c1.gif" style="width:24px;height:24px;vertical-align:middle;"><span style="vertical-align:middle;">
-             <script>
+               <script>
               var pics_srcb = new Array("assets/images/loading02_r2_c1.gif","assets/images/14308.png");
               var numb = -1;
               var boolb = true;
  
               slideshow_timer3();
-               
-              function slideshow_timer3(){
-                  if (numb == 1){
-                      /*num = 0;*/
-                      boolb = false;
-                  } 
-                  else {
-                      numb ++;
-                  }
-                  if(boolb){
-                      document.getElementById("mypic_b").src=pics_srcb[numb];
-                      setTimeout("slideshow_timer3()",15000); 
-                  }
+ 
+              function slideshow_timer2(){
+                if (numb == 1){
+                    /*num = 0;*/
+                    boolb = false;
+                } 
+                else {
+                    numb ++;
+                }
+                if(boolb){
+                    document.getElementById("mypic_b").src=pics_srcb[numb];
+                    setTimeout("slideshow_timer3()",15000); 
                 }
             　 }
               </script></li>
@@ -122,7 +121,7 @@
           func0();
           
           function func0(){
-            setTimeout("func1()",15000); 
+            setTimeout("func1()",15001); 
           }
           
           // ボタンを押した時に動く関数
