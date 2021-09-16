@@ -84,31 +84,28 @@
                 }
             　 }
               </script></li>
+            
               <li>ファイルデータ解析中&emsp;<img id="mypic_b" src="assets/images/loading02_r2_c1.gif" style="width:24px;height:24px;vertical-align:middle;"><span style="vertical-align:middle;">
              <script>
               var pics_srcb = new Array("assets/images/loading02_r2_c1.gif","assets/images/14308.png");
               var numb = -1;
               var boolb = true;
-              var boolc = false;
  
               slideshow_timer3();
                
               function slideshow_timer3(){
-                if (numb == 1){
-                    /*num = 0;*/
-                    boolb = false;
-                    boolc = true;
-                } 
-                else {
-                    numb ++;
-                }
-                if(boolb){
-                    document.getElementById("mypic_b").src=pics_srcb[numb];
-                    setTimeout("slideshow_timer3()",15000); 
-                }
-                if(boolc){
-                setInterval("updateProgress()", 50);
-                boolc = false;
+                  if (numb == 1){
+                      /*num = 0;*/
+                      boolb = false;
+                      boolc = true;
+                  } 
+                  else {
+                      numb ++;
+                  }
+                  if(boolb){
+                      document.getElementById("mypic_b").src=pics_srcb[numb];
+                      setTimeout("slideshow_timer3()",15000); 
+                  }
                 }
             　 }
               </script></li>
@@ -126,7 +123,7 @@
           func1();
           
           function func0(){
-            setTimeout("func1()",20000); 
+            setTimeout("func1()",15000); 
           }
           
           // ボタンを押した時に動く関数
