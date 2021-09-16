@@ -103,12 +103,36 @@
                 if(boolb){
                     document.getElementById("mypic_b").src=pics_srcb[numb];
                     setTimeout("slideshow_timer3()",15000); 
+                    updateProgress();
                 }
             　 }
               </script></li>
         </ul>
         
-        <progress id="myProgress" value="0" max="100">0%</progress>
+        <!--進捗状況を表すローディングバー -->
+        <div>
+          <progress id="myProgress" value="0" max="100">0%</progress>
+        </div>
+         <script>
+           var val;//進捗値
+           var intervalID //一定間隔で処理を行うintervalのIDを保持
+           
+           function updateProgress(){
+            var val += 1;
+             document.getElementById("myProgress").value = val;
+             document.getElementByID("myProgress").innerText = val + "%";
+             
+             //ローディングバーが100%になった時の処理
+             if(val == 100){
+              clearInterval(intervalID);
+             }
+           }
+         </script>
+        
+        
+        
+        
+        
         <!-- STAGE3-1問題セクション　ここから -->
         <!--
         <section class="section">
