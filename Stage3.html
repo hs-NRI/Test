@@ -121,6 +121,7 @@
           var val;
           // 一定間隔で処理を行うintervalのIDを保持
           var intervalID;
+          
           func0();
           
           function func0(){
@@ -141,6 +142,10 @@
             document.getElementById("myProgress").value = val;
             document.getElementById("myProgress").innerText = val + "%";
 
+            //Status
+            var per = document.getElementById("Status");
+            per.value = document.getElementById("myProgress").value;
+             
             // 最大値まで達したら終了
             if (val == 100) {
               clearInterval(intervalID);
