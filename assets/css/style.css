@@ -77,7 +77,7 @@ summary::-webkit-details-marker {
 
 progress[value] {
   appearance: none;
-  backgroud-color: green;
+  backgroud-color: #006837;
   border: 1px solid black;
   border-radius: 2px;
   height: 20px;
