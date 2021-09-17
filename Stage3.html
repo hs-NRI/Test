@@ -119,29 +119,11 @@
           <progress id="myProgress" value="0" max="100">0%</progress>
           <div class="computervirus-textcolor"><output id = status>0</output>%</div>
         </div>
-        <script src="https://unpkg.com/dexie@3.0.2/dist/dexie.min.js"></script>
         <script language="javascript" type="text/javascript">
           // プログレスバーの進捗値
-          var val;
+          var val = localStorage.getItem("index");
           // 一定間隔で処理を行うintervalのIDを保持
           var intervalID;
-          
-          const db = new Dexie("SocialDB");
-          
-          db.version(1)
-            .stores({
-              saveData: "name,index"  // 一番最初に来るnameがキー。ageがインデックス。
-            });
-            
-          db.saveData.get("Data")    // データを取得(Promiseが返る)
-              // データ処理
-              .then((saveData)=>{
-                val = saveData.val;
-              })
-              // エラー処理
-              .catch((error)=>{
-                console.error(error);
-              });
           
           func0();
           
@@ -157,15 +139,7 @@
 
            // プログレスバーを更新する
            function updateProgress() {
-           　　db.saveData
-          　　 // データ挿入(Promiseが返る)
-              .put({
-              name: "Data", index: "val"
-              })
-              // エラー処理
-              .catch((error)=>{
-                console.error(error);
-              });
+             localStorage.setItem("index", val)
             // プログレスバーの進捗値を更新し、プログレスバーに反映させる
             val += 1;
             document.getElementById("myProgress").value = val;
