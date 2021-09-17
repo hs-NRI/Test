@@ -116,7 +116,7 @@
         <!--進捗状況を表すローディングバー -->
         <div>
           <h2 class="computervirus-textcolor">データ転送中</h2>
-          <progress id="myProgress" value="0" max="100"><!--0%--></progress>
+          <progress id="myProgress" value="0" max="100">0%</progress>
           <div class="computervirus-textcolor"><output id = status>0</output>%</div>
         </div>
         <script language="javascript" type="text/javascript">
@@ -126,7 +126,8 @@
           var intervalID;
           //Status
           var per = document.getElementById("status");
-          per.value = document.getElementById("myProgress").value;
+          per.vakue = localStorage.getItem('valData');
+          //per.value = document.getElementById("myProgress").value;
           
           func0();
           
