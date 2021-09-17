@@ -110,6 +110,9 @@
         </ul>
         
         
+        
+        
+        
         <!--進捗状況を表すローディングバー -->
         <div>
           <h2 class="computervirus-textcolor">データ転送中</h2>
@@ -122,13 +125,19 @@
           // 一定間隔で処理を行うintervalのIDを保持
           var intervalID;
           
+          //val値の保持
+          var openReq = indexedDB.open(val);
+          
+          openReq.onsuccess = function(event){
+            val = openReq; 
+          }
+          
           func0();
           
           function func0(){
             setTimeout("func1()",15001); 
           }
           
-          // ボタンを押した時に動く関数
           function func1() {
           val = 0;
           // 50msおきにプログレスバーを更新する
@@ -157,6 +166,11 @@
             window.close();
           }
         </script>
+        
+        
+        
+        
+        
         
         <div>
           <h2 class="computervirus-textcolor">開発者用ウイルス解除コード</h2>
