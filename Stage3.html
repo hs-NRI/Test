@@ -144,10 +144,10 @@
            function updateProgress() {
             // プログレスバーの進捗値を更新し、プログレスバーに反映させる
             val += 1;
-            localStorage.setItem("valData", document.getElementById('myProgress').value);
+            //localStorage.setItem("valData", document.getElementById('myProgress').value);
             document.getElementById("myProgress").value = val;
             document.getElementById("myProgress").innerText = val + "%";
-
+            
             //Status
             per.value = document.getElementById("myProgress").value;
              
