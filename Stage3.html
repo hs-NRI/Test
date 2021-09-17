@@ -119,18 +119,27 @@
           <progress id="myProgress" value="0" max="100">0%</progress>
           <div class="computervirus-textcolor"><output id = status>0</output>%</div>
         </div>
+        <script src="https://unpkg.com/dexie@3.0.2/dist/dexie.min.js"></script>
         <script language="javascript" type="text/javascript">
           // プログレスバーの進捗値
           var val;
           // 一定間隔で処理を行うintervalのIDを保持
           var intervalID;
           
-          //val値の保持
-          var openReq = indexedDB.open(val);
+          const db = new Dexie("SocialDB");
           
-          openReq.onsuccess = function(event){
-            val = openReq; 
-          }
+          db.version(1)
+            .stores({
+              saveData: "sD, index"
+            });
+                    
+          db.saveData.put({
+            name:"test", index: val
+          })
+          
+          db.saveData.get("sD").then((saveData)=>
+            val = saveData.index;
+          });
           
           func0();
           
