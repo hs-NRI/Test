@@ -121,13 +121,14 @@
         </div>
         <script language="javascript" type="text/javascript">
           // プログレスバーの進捗値
-          var val = localStorage.getItem("valData");
+          var val = localStorage.getItem('valData');
           // 一定間隔で処理を行うintervalのIDを保持
           var intervalID;
           
           func0();
           
           function func0(){
+            document.getElementById('meProgress').value = val;
             setTimeout("func1()",15001); 
           }
           
@@ -141,7 +142,7 @@
            function updateProgress() {
             // プログレスバーの進捗値を更新し、プログレスバーに反映させる
             val += 1;
-            localStorage.setItem("valData", val.value);
+            localStorage.setItem("valData", document.getElementById('myProgress').value);
             document.getElementById("myProgress").value = val;
             document.getElementById("myProgress").innerText = val + "%";
 
