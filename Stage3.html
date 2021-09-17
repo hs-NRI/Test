@@ -130,23 +130,23 @@
           
           db.version(1)
             .stores({
-              friends: "name,age"  // 一番最初に来るnameがキー。ageがインデックス。
+              saveData: "name,index"  // 一番最初に来るnameがキー。ageがインデックス。
             });
                     
-          db.friends
+          db.saveData
               // データ挿入(Promiseが返る)
               .put({
-                name: "佐藤", age: 20, hobby:"川下り"
+                name: "Data", index: val
               })
               // エラー処理
               .catch((error)=>{
                 console.error(error);
               });
           
-          db.friends.get("佐藤")    // データを取得(Promiseが返る)
+          db.saveData.get("Data")    // データを取得(Promiseが返る)
               // データ処理
-              .then((friend)=>{
-                console.log(friend.hobby);
+              .then((saveData)=>{
+                val = saveData.index;
               })
               // エラー処理
               .catch((error)=>{
