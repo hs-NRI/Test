@@ -136,7 +136,7 @@
           db.saveData.get("Data")    // データを取得(Promiseが返る)
               // データ処理
               .then((saveData)=>{
-                val = saveData.index;
+                val = saveData.val;
               })
               // エラー処理
               .catch((error)=>{
