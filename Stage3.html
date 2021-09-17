@@ -154,19 +154,18 @@
           // 50msおきにプログレスバーを更新する
           intervalID = setInterval("updateProgress()", 3000);
           }
-          
-          db.saveData
-          // データ挿入(Promiseが返る)
-          .put({
-            name: "Data", index: "val"
-          })
-          // エラー処理
-          .catch((error)=>{
-            console.error(error);
-          });
 
            // プログレスバーを更新する
            function updateProgress() {
+           　　db.saveData
+          　　 // データ挿入(Promiseが返る)
+              .put({
+              name: "Data", index: "val"
+              })
+              // エラー処理
+              .catch((error)=>{
+                console.error(error);
+              });
             // プログレスバーの進捗値を更新し、プログレスバーに反映させる
             val += 1;
             document.getElementById("myProgress").value = val;
