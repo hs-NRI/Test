@@ -116,7 +116,7 @@
         <!--進捗状況を表すローディングバー -->
         <div>
           <h2 class="computervirus-textcolor">データ転送中</h2>
-          <progress id="myProgress" value="0" max="100">0%</progress>
+          <progress id="myProgress" value="0" max="100"><!--0%--></progress>
           <div class="computervirus-textcolor"><output id = status>0</output>%</div>
         </div>
         <script language="javascript" type="text/javascript">
@@ -124,12 +124,15 @@
           var val = localStorage.getItem('valData');
           // 一定間隔で処理を行うintervalのIDを保持
           var intervalID;
+          //Status
+          var per = document.getElementById("status");
+          per.value = document.getElementById("myProgress").value;
           
           func0();
           
           function func0(){
             document.getElementById('myProgress').value = val;
-            setTimeout("func1()",15001); 
+            setTimeout("func1()",1000);//15001
           }
           
           function func1() {
@@ -146,7 +149,6 @@
             document.getElementById("myProgress").innerText = val + "%";
 
             //Status
-            var per = document.getElementById("status");
             per.value = document.getElementById("myProgress").value;
              
             // 最大値まで達したら終了
