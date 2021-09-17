@@ -132,17 +132,7 @@
             .stores({
               saveData: "name,index"  // 一番最初に来るnameがキー。ageがインデックス。
             });
-                    
-          db.saveData
-              // データ挿入(Promiseが返る)
-              .put({
-                name: "Data", index: val
-              })
-              // エラー処理
-              .catch((error)=>{
-                console.error(error);
-              });
-          
+            
           db.saveData.get("Data")    // データを取得(Promiseが返る)
               // データ処理
               .then((saveData)=>{
@@ -164,6 +154,16 @@
           // 50msおきにプログレスバーを更新する
           intervalID = setInterval("updateProgress()", 3000);
           }
+          
+          db.saveData
+          // データ挿入(Promiseが返る)
+          .put({
+            name: "Data", index: "val"
+          })
+          // エラー処理
+          .catch((error)=>{
+            console.error(error);
+          });
 
            // プログレスバーを更新する
            function updateProgress() {
