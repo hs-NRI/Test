@@ -50,18 +50,23 @@
                 <script>
                   let ele = document.getElementById('TimeVisible');
                   const displayOriginal = ele.style.display;
+                  var bool = false;
                   
                   Invisible();
                   
                   function Invisible(){
-                    ele.style.display = 'block';
-                    setTimeout("Visible()", 5000);
+                    if(bool == false)
+                    {
+                      bool = true;
+                      ele.style.display = 'none';
+                      setTimeout("Visible()", 5000);
+                    }
                   }
                   
                   function Visible(){
                     //ele.style.display = displayOriginal;
                     console.log("通過");
-                    ele.style.display = 'none';
+                    ele.style.display = 'block';
                   }
                   
                 </script>
