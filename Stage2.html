@@ -84,7 +84,17 @@
                 <input id="field" text="text" value=""> 
                 <button onclick="Judge()">送信</button>
               </div>
-              <script>
+
+                  <!--<answer-input v-bind:correct="correctAnswer['stage2']['q1']" onclick="click()" v-on:answer-input="answerInput($event, 'stage2', 1)"></answer-input>-->
+                  
+                  <a class="link-hint" href="hint2.html" target="hint2">ヒントをみる ></a>
+               <!-- </div><!-- /.column -->
+              <!-- </div><!-- /.row -->
+
+            </div>
+          </div>
+        </section>
+                    <script>
                 
                 document.getElementById("field").style.display = "none";
                 
@@ -110,15 +120,6 @@
                    }
                 }
               </script>
-                  <!--<answer-input v-bind:correct="correctAnswer['stage2']['q1']" onclick="click()" v-on:answer-input="answerInput($event, 'stage2', 1)"></answer-input>-->
-                  
-                  <a class="link-hint" href="hint2.html" target="hint2">ヒントをみる ></a>
-               <!-- </div><!-- /.column -->
-              <!-- </div><!-- /.row -->
-
-            </div>
-          </div>
-        </section>
 
         <!-- STAGE2クリア画面　ここから -->
         <!--<section v-if="clear['stage2']" v-bind:class="{isClear:clear['stage2']}"  class="section section--clear bg-color--gray">-->
