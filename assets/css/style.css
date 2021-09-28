@@ -158,6 +158,27 @@ button {
   padding-bottom: 30px;
 }
 
+.section--myclear{
+  /* ステージクリア画面 */
+  position: fixed;
+  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* 読み込み時に一瞬表示されるのを防ぐ */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+}
+
 .section--clear {
   /* ステージクリア画面 */
   position: fixed;
