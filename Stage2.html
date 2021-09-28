@@ -46,8 +46,22 @@
             <div class="container">
               <h2 class="section-title"><span class="section-title__stage">STAGE：2</span>キーワードを入力</h2>
               
-              <div id="TimeVisible">
-                <a>表字</a>
+              <div id='TimeVisible'>
+                <a>表示</a>
+                <script>
+                  let ele = document.getElementById('TimeVisible');
+                  const displayOriginal = ele.style.display;
+                  
+                  function Invisible(){
+                    ele.style.display = 'none';
+                    setTimeout('Visible', 5000);
+                  }
+                  
+                  function  Visible(){
+                      ele.style.display = displayOriginal;
+                  {
+                  
+                </script>
               </div>
               
               <div class="row">
