@@ -46,9 +46,7 @@
             <div class="container">
               <h2 class="section-title"><span class="section-title__stage">STAGE：2</span>キーワードを入力</h2>
               
-              <div id='TimeVisible'>
-                <a>表示</a>
-              </div>
+              <div id='TimeVisible'>表示</div>
                 <script>
                   let ele = document.getElementById('TimeVisible');
                   const displayOriginal = ele.style.display;
@@ -62,6 +60,7 @@
                   
                   function Visible(){
                     //ele.style.display = displayOriginal;
+                    console.log("通過");
                     ele.style.display = "block";
                   }
                   
