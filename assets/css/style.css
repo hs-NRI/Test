@@ -28,7 +28,7 @@ body {
   margin: 0;
 }
 
-it{
+input.it{
   border: none;
   padding: 25px 35px;
   display: block;
