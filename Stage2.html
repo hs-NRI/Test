@@ -80,8 +80,28 @@
                 <img src="assets/images/えいご.png" alt="">
               </figure>
               
-              <input id="field" text="text">
-                  
+              <div>
+                <input id="field" text="text"> 
+                <button onclick="Judge()">送信</button>
+              </div>
+              <script>
+                var int = 0;
+                
+                function Judge(){
+                   if(document.getElementById("field").text == "いいい")
+                   {
+                      console.log("正解");
+                   }
+                   else
+                   {
+                     int++;
+                     if(int == 3)
+                     {
+                       console.log("ヒント出題"); 
+                     }
+                   }
+                }
+              </script>
                   <!--<answer-input v-bind:correct="correctAnswer['stage2']['q1']" onclick="click()" v-on:answer-input="answerInput($event, 'stage2', 1)"></answer-input>-->
                   
                   <a class="link-hint" href="hint2.html" target="hint2">ヒントをみる ></a>
