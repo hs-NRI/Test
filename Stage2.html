@@ -85,12 +85,16 @@
                 <button onclick="Judge()">送信</button>
               </div>
               <script>
+                
+                document.getElementById("hide").style.visibility = "hidden"
+                
                 var int = 0;
                 var ans = "いいい";
                 function Judge(){
                    if(document.getElementById("field").value == ans)
                    {
                       console.log("正解");
+                      show();
                    }
                    else
                    {
@@ -99,6 +103,10 @@
                      {
                        console.log("ヒント出題"); 
                      }
+                   }
+                  
+                   function show(){
+                     document.getElementById("hide").style.visibility = "visible"; 
                    }
                 }
               </script>
@@ -113,8 +121,8 @@
         </section>
 
         <!-- STAGE2クリア画面　ここから -->
-        <section v-if="clear['stage2']" v-bind:class="{isClear:clear['stage2']}"  class="section section--clear bg-color--gray">
-          <div class="container">
+        <!--<section v-if="clear['stage2']" v-bind:class="{isClear:clear['stage2']}"  class="section section--clear bg-color--gray">-->
+          <div id="hide" class="container section section--clear bg-color--gray">
             <div class="clear-message">
               <div class="clear-message__title">STAGE：2　クリア！</div>
               <div class="clear-message__content">やるじゃないか<br>
