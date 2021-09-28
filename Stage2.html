@@ -81,14 +81,14 @@
               </figure>
               
               <div>
-                <input id="field" text="text"> 
+                <input id="field" text="text" value=""> 
                 <button onclick="Judge()">送信</button>
               </div>
               <script>
                 var int = 0;
                 var ans = "いいい";
                 function Judge(){
-                   if(document.getElementById("field").text == ans)
+                   if(document.getElementById("field").value == ans)
                    {
                       console.log("正解");
                    }
