@@ -161,7 +161,7 @@ button {
 .section--myclear{
   /* ステージクリア画面 */
   position: fixed;
-  display: none;
+  /*display: none;*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
